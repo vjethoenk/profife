@@ -1,37 +1,40 @@
 import { motion } from "framer-motion";
 import { Check, Compass, Award, Lightbulb, Users } from "lucide-react";
-import profife from "../assets/profife.jpg";
+import profife from "../assets/pro.png";
 
 const About = () => {
   const strengths = [
     {
-      title: "Problem Solving",
-      desc: "Phân tích và giải quyết các bài toán thuật toán & logic hệ thống.",
+      title: "Quick Learner",
+      desc: "Tiếp thu công nghệ mới nhanh và luôn sẵn sàng học hỏi từ phản hồi.",
+      icon: Compass,
+      color: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20",
+    },
+    {
+      title: "Responsibility",
+      desc: "Có trách nhiệm với công việc được giao và cố gắng hoàn thành đúng tiến độ.",
       icon: Lightbulb,
-      color: "text-indigo-400 bg-indigo-500/10 border-indigo-500/20"
+      color: "text-indigo-400 bg-indigo-500/10 border-indigo-500/20",
     },
     {
       title: "Teamwork",
-      desc: "Khả năng phối hợp nhịp nhàng, lắng nghe và chia sẻ với đồng đội.",
+      desc: "Có tinh thần hợp tác, sẵn sàng lắng nghe và hỗ trợ đồng đội trong các dự án.",
       icon: Users,
-      color: "text-purple-400 bg-purple-500/10 border-purple-500/20"
+      color: "text-purple-400 bg-purple-500/10 border-purple-500/20",
     },
     {
-      title: "Communication",
-      desc: "Kỹ năng truyền đạt thông tin kỹ thuật rõ ràng và chuyên nghiệp.",
+      title: "Growth Mindset",
+      desc: "Chủ động cải thiện kỹ năng và mong muốn phát triển lâu dài .",
       icon: Award,
-      color: "text-pink-400 bg-pink-500/10 border-pink-500/20"
+      color: "text-pink-400 bg-pink-500/10 border-pink-500/20",
     },
-    {
-      title: "Self Learning",
-      desc: "Chủ động cập nhật các công nghệ và xu hướng lập trình mới.",
-      icon: Compass,
-      color: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20"
-    }
   ];
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden bg-[#030712] z-10">
+    <section
+      id="about"
+      className="py-24 relative overflow-hidden bg-[#030712] z-10"
+    >
       {/* Background decorations */}
       <div className="absolute top-1/3 right-0 w-80 h-80 bg-indigo-600/5 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-1/3 left-0 w-80 h-80 bg-purple-600/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -64,7 +67,8 @@ const About = () => {
             transition={{ delay: 0.2 }}
             className="text-gray-400 text-sm md:text-base leading-relaxed"
           >
-            Tìm hiểu thêm về định hướng công việc, thế mạnh cốt lõi và con đường lập trình của tôi.
+            Tìm hiểu thêm về định hướng công việc, thế mạnh cốt lõi và con đường
+            lập trình của tôi.
           </motion.p>
         </div>
 
@@ -96,11 +100,15 @@ const About = () => {
 
                 {/* Info Overlay */}
                 <div className="absolute bottom-6 left-6 right-6">
-                  <p className="text-xs font-mono text-indigo-400 mb-1">Học vấn</p>
+                  <p className="text-xs font-mono text-indigo-400 mb-1">
+                    Học vấn
+                  </p>
                   <h4 className="text-white font-bold text-base md:text-lg">
                     Đại Học Công Nghệ Giao Thông Vận Tải (UTT)
                   </h4>
-                  <p className="text-xs text-gray-400 mt-1">Chuyên ngành Công nghệ phần mềm (K4)</p>
+                  <p className="text-xs text-gray-400 mt-1">
+                    Chuyên ngành Công nghệ thông tin (K73)
+                  </p>
                 </div>
               </div>
             </div>
@@ -116,13 +124,19 @@ const About = () => {
               className="space-y-4"
             >
               <h3 className="text-2xl font-bold text-white tracking-tight">
-                Tôi là một lập trình viên tràn đầy nhiệt huyết
+                Tôi là một lập trình viên đam mê phát triển Web
               </h3>
               <p className="text-gray-300 leading-relaxed text-sm md:text-base">
-                Hiện tại, tôi là sinh viên năm thứ 4 chuyên ngành Kỹ thuật Phần mềm tại Đại Học Công Nghệ Giao Thông Vận Tải. Với thế mạnh và đam mê to lớn dành cho phát triển ứng dụng Web, tôi luôn mong muốn tạo ra những sản phẩm giao diện cuốn hút và hệ thống backend vững chắc.
+                Hiện tại, tôi là sinh viên năm 4 chuyên ngành Kỹ thuật Phần mềm
+                tại Trường Đại học Công nghệ Giao thông Vận tải. Tôi đam mê phát
+                triển các ứng dụng web và luôn chủ động học hỏi những công nghệ
+                mới để hoàn thiện kỹ năng của mình.
               </p>
-              <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-                Định hướng nghề nghiệp của tôi là trở thành một <span className="text-indigo-400 font-semibold">Fullstack Developer chuyên nghiệp</span>, không ngừng học hỏi để nắm bắt các giải pháp kiến trúc phần mềm mới, đóng góp các giá trị thiết thực và mang lại trải nghiệm tối ưu nhất cho người dùng cuối.
+              <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+                Tôi mong muốn được làm việc trong môi trường chuyên nghiệp, nơi
+                có thể áp dụng kiến thức đã học, tích lũy kinh nghiệm thực tế và
+                từng bước phát triển thành một Fullstack Developer có nền tảng
+                vững chắc.
               </p>
             </motion.div>
 
@@ -141,15 +155,21 @@ const About = () => {
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                     className="glass-light p-4 rounded-xl border-white/5 flex gap-4 items-start hover:border-white/10 hover:bg-white/5 transition-all duration-300"
                   >
-                    <div className={`p-2.5 rounded-lg border flex-shrink-0 ${str.color}`}>
+                    <div
+                      className={`p-2.5 rounded-lg border flex-shrink-0 ${str.color}`}
+                    >
                       <str.icon size={18} />
                     </div>
                     <div>
                       <div className="flex items-center gap-1.5 mb-1">
                         <Check size={14} className="text-indigo-400" />
-                        <h5 className="text-white font-bold text-sm">{str.title}</h5>
+                        <h5 className="text-white font-bold text-sm">
+                          {str.title}
+                        </h5>
                       </div>
-                      <p className="text-gray-400 text-xs leading-relaxed">{str.desc}</p>
+                      <p className="text-gray-400 text-xs leading-relaxed">
+                        {str.desc}
+                      </p>
                     </div>
                   </motion.div>
                 ))}

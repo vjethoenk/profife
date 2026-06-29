@@ -1,137 +1,192 @@
 import { motion } from "framer-motion";
-import { Code2, Server, Database, Wrench } from "lucide-react";
-import { skillsData } from "../data";
+import {
+  SiHtml5,
+  SiCss,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiNestjs,
+  SiJsonwebtokens,
+  SiPostgresql,
+  SiMongodb,
+  SiPrisma,
+  SiGit,
+  SiGithub,
+  SiDocker,
+} from "react-icons/si";
+import { Zap, Layout, Server, Database, Wrench, Cloud } from "lucide-react";
+
+interface TechItem {
+  name: string;
+  icon: React.ReactNode;
+  color: string;
+}
+
+interface TechGroup {
+  title: string;
+  icon: React.ReactNode;
+  description: string;
+  items: TechItem[];
+  gradient: string;
+}
 
 const Skills = () => {
-  // Map categories to modern techy icons
-  const categoryIcons = (cat: string) => {
-    switch (cat.toLowerCase()) {
-      case "frontend":
-        return <Code2 className="text-cyan-400" size={22} />;
-      case "backend":
-        return <Server className="text-indigo-400" size={22} />;
-      case "database & cloud":
-        return <Database className="text-purple-400" size={22} />;
-      case "tools & devops":
-        default:
-        return <Wrench className="text-pink-400" size={22} />;
-    }
-  };
+  const techGroups: TechGroup[] = [
+    {
+      title: "Frontend Development",
+      icon: <Layout className="w-5 h-5 text-indigo-400" />,
+      description:
+        "Xây dựng giao diện Responsive, hiệu năng cao và UX mượt mà.",
+      gradient: "from-indigo-500/20 to-cyan-500/20 border-indigo-500/30",
+      items: [
+        { name: "HTML5", icon: <SiHtml5 />, color: "text-[#E34F26]" },
+        { name: "CSS3", icon: <SiCss />, color: "text-[#1572B6]" },
+        { name: "JavaScript", icon: <SiJavascript />, color: "text-[#F7DF1E]" },
+        { name: "TypeScript", icon: <SiTypescript />, color: "text-[#3178C6]" },
+        { name: "ReactJS", icon: <SiReact />, color: "text-[#61DAFB]" },
+        { name: "NextJS", icon: <SiNextdotjs />, color: "text-white" },
+        {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss />,
+          color: "text-[#06B6D4]",
+        },
+      ],
+    },
+    {
+      title: "Backend Development",
+      icon: <Server className="w-5 h-5 text-purple-400" />,
+      description:
+        "Xây dựng API RESTful, GraphQL và hệ thống backend hiệu năng cao, bảo mật.",
+      gradient: "from-purple-500/20 to-pink-500/20 border-purple-500/30",
+      items: [
+        { name: "NestJS", icon: <SiNestjs />, color: "text-[#E0234E]" },
+        { name: "Prisma ORM", icon: <SiPrisma />, color: "text-slate-300" },
+        {
+          name: "JWT auth",
+          icon: <SiJsonwebtokens />,
+          color: "text-[#d63aff]",
+        },
+        {
+          name: "GraphQL",
+          icon: <Zap className="w-4 h-4" />,
+          color: "text-[#E10098]",
+        },
+      ],
+    },
+    {
+      title: "Database Management",
+      icon: <Database className="w-5 h-5 text-emerald-400" />,
+      description:
+        "Thiết kế schema dữ liệu quan hệ và phi quan hệ, tối ưu hóa truy vấn.",
+      gradient: "from-emerald-500/20 to-teal-500/20 border-emerald-500/30",
+      items: [
+        { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-[#4169E1]" },
+        { name: "MongoDB", icon: <SiMongodb />, color: "text-[#47A248]" },
+      ],
+    },
+    {
+      title: "DevOps & Tools",
+      icon: <Wrench className="w-5 h-5 text-amber-400" />,
+      description:
+        "Quản lý mã nguồn, triển khai container hóa và dịch vụ đám mây.",
+      gradient: "from-amber-500/20 to-orange-500/20 border-amber-500/30",
+      items: [
+        { name: "Git", icon: <SiGit />, color: "text-[#F05032]" },
+        { name: "GitHub", icon: <SiGithub />, color: "text-white" },
+        { name: "Docker", icon: <SiDocker />, color: "text-[#2496ED]" },
+        {
+          name: "AWS S3",
+          icon: <Cloud className="w-4 h-4" />,
+          color: "text-[#FF9900]",
+        },
+      ],
+    },
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        type: "spring" as const,
-        stiffness: 100,
-      },
-    },
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
   };
 
   return (
-    <section id="skills" className="py-24 relative overflow-hidden bg-[#030712] z-10">
-      {/* Background decorations */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <section
+      id="skills"
+      className="relative z-10 py-20 px-4 sm:px-6 lg:px-8 bg-[#030014]/50"
+    >
+      {/* Background radial glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="section-container">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="section-badge"
-          >
-            Hệ sinh thái kỹ thuật
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-          >
-            Năng Lực Công Nghệ
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-gray-400 text-sm md:text-base leading-relaxed"
-          >
-            Những ngôn ngữ, thư viện, cơ sở dữ liệu và công cụ lập trình tôi đã nghiên cứu và làm chủ.
-          </motion.p>
-        </div>
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 mb-4">
+            Công Nghệ Sử Dụng
+          </h2>
+          <p className="text-gray-400 max-w-xl mx-auto text-lg">
+            Hệ sinh thái công nghệ tôi đã làm việc và áp dụng vào phát triển các
+            dự án thực tế.
+          </p>
+        </motion.div>
 
-        {/* Categories Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid md:grid-cols-2 gap-8"
         >
-          {skillsData.map((cat, idx) => (
+          {techGroups.map((group) => (
             <motion.div
-              key={idx}
-              variants={cardVariants}
-              className="glass hover:border-indigo-500/30 rounded-2xl p-6 md:p-8 transition-all duration-300 shadow-xl group card-hover relative"
+              key={group.title}
+              variants={itemVariants}
+              whileHover={{ y: -6 }}
+              className={`glassmorphism p-8 rounded-3xl relative border border-transparent hover:border-slate-700 bg-gradient-to-br ${group.gradient} backdrop-blur-md transition-all duration-300 group`}
             >
-              {/* Top border color indicator */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500/35 via-purple-500/35 to-pink-500/35 rounded-t-2xl opacity-40 group-hover:opacity-100 transition-opacity"></div>
+              {/* Internal glow effect */}
+              <div className="absolute inset-0 rounded-3xl bg-white/[0.01] pointer-events-none" />
 
-              {/* Category Header */}
-              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/5">
-                <span className="p-2.5 rounded-xl glass-light border-white/10 flex items-center justify-center">
-                  {categoryIcons(cat.category)}
-                </span>
-                <h3 className="text-xl font-bold text-white tracking-tight">
-                  {cat.category}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2.5 bg-white/5 rounded-xl text-white">
+                  {group.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-indigo-300 transition-colors duration-300">
+                  {group.title}
                 </h3>
               </div>
 
-              {/* Skills List inside this Category */}
-              <div className="space-y-5">
-                {cat.skills.map((skill, sIdx) => (
-                  <div key={sIdx} className="space-y-1.5">
-                    {/* Skill Info */}
-                    <div className="flex justify-between items-center text-sm font-medium">
-                      <span className="text-gray-300 group-hover:text-white transition-colors">
-                        {skill.name}
-                      </span>
-                      <span className="text-indigo-400 font-mono text-xs">
-                        {skill.level}%
-                      </span>
-                    </div>
+              <p className="text-sm text-slate-400 mb-8 leading-relaxed">
+                {group.description}
+              </p>
 
-                    {/* Progress Bar Container */}
-                    <div className="h-2 w-full bg-slate-950/80 rounded-full overflow-hidden border border-white/5 relative">
-                      {/* Glow highlight */}
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1.2, ease: "easeOut", delay: sIdx * 0.05 }}
-                        className="skill-bar-fill shadow-[0_0_8px_rgba(99,102,241,0.4)]"
-                      />
-                    </div>
-                  </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {group.items.map((tech) => (
+                  <motion.div
+                    key={tech.name}
+                    whileHover={{ scale: 1.05 }}
+                    className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900/50 border border-white/5 hover:border-white/10 hover:bg-slate-900/90 transition-all duration-300 cursor-default"
+                  >
+                    <span className={`text-2xl ${tech.color} shrink-0`}>
+                      {tech.icon}
+                    </span>
+                    <span className="text-xs font-semibold text-slate-300 tracking-wide">
+                      {tech.name}
+                    </span>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>

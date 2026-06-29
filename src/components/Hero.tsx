@@ -1,17 +1,46 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Download } from "lucide-react";
-import profife from "../assets/profife.jpg";
+import { ArrowUpRight, Database, Download } from "lucide-react";
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiNestjs,
+  SiDocker,
+} from "react-icons/si";
 
 const Hero = () => {
   // Floating technology items to orbit/animate around the avatar
   const techIcons = [
-    { name: "React", color: "from-cyan-400 to-blue-500", x: -140, y: -60, delay: 0 },
-    { name: "NextJS", color: "from-gray-300 to-gray-500", x: 140, y: -100, delay: 0.5 },
-    { name: "TS", color: "from-blue-500 to-indigo-600", x: -150, y: 80, delay: 1 },
-    { name: "NestJS", color: "from-red-500 to-pink-600", x: 120, y: 60, delay: 1.5 },
-    { name: "MongoDB", color: "from-green-400 to-emerald-600", x: -40, y: -160, delay: 2 },
-    { name: "SQL", color: "from-blue-600 to-indigo-800", x: 60, y: 160, delay: 2.5 },
-    { name: "Docker", color: "from-blue-400 to-sky-500", x: -60, y: 170, delay: 3 },
+    {
+      icon: <SiReact className="text-[#61DAFB] w-6 h-6" />,
+      style: "top-8 left-12",
+      delay: 0,
+    },
+    {
+      icon: <SiNextdotjs className="text-white w-6 h-6" />,
+      style: "bottom-12 left-4",
+      delay: 0.5,
+    },
+    {
+      icon: <SiTypescript className="text-[#3178C6] w-6 h-6" />,
+      style: "top-20 right-16",
+      delay: 1,
+    },
+    {
+      icon: <SiNestjs className="text-[#E0234E] w-6 h-6" />,
+      style: "bottom-20 right-8",
+      delay: 1.5,
+    },
+    {
+      icon: <Database className="text-[#CC2927] w-6 h-6" />,
+      style: "top-[45%] left-4",
+      delay: 2,
+    },
+    {
+      icon: <SiDocker className="text-[#2496ED] w-6 h-6" />,
+      style: "bottom-1/3 right-1/3",
+      delay: 2.5,
+    },
   ];
 
   return (
@@ -24,7 +53,10 @@ const Hero = () => {
 
       {/* Decorative Blob Shapes */}
       <div className="absolute top-1/4 left-1/10 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl animate-blob"></div>
-      <div className="absolute bottom-1/4 right-1/10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-blob" style={{ animationDelay: "2s" }}></div>
+      <div
+        className="absolute bottom-1/4 right-1/10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-blob"
+        style={{ animationDelay: "2s" }}
+      ></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
 
       <div className="section-container relative z-10 w-full grid lg:grid-cols-12 gap-12 items-center">
@@ -88,7 +120,10 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-gray-400 text-sm md:text-base max-w-xl leading-relaxed"
           >
-            Tôi là kỹ sư phần mềm tương lai đam mê kiến tạo các sản phẩm web cao cấp, chú trọng tối ưu hóa hiệu năng, trải nghiệm người dùng mượt mà và cấu trúc mã nguồn sạch sẽ.
+            Tôi là một Fullstack Developer mới tốt nghiệp với niềm đam mê phát
+            triển web. Tôi mong muốn được tham gia xây dựng những sản phẩm chất
+            lượng, đồng thời tích lũy kinh nghiệm và nâng cao kỹ năng trong môi
+            trường chuyên nghiệp.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -98,85 +133,89 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="flex flex-wrap gap-4 pt-4"
           >
-            <a href="#projects" className="btn-primary flex items-center gap-2 group">
+            <a
+              href="#projects"
+              className="btn-primary flex items-center gap-2 group"
+            >
               Xem dự án của tôi
-              <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <ArrowUpRight
+                size={18}
+                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+              />
             </a>
 
-            <a
-              href="#"
-              className="btn-outline flex items-center gap-2 group"
-            >
-              <Download size={18} className="group-hover:translate-y-0.5 transition-transform" />
+            <a href="#" className="btn-outline flex items-center gap-2 group">
+              <Download
+                size={18}
+                className="group-hover:translate-y-0.5 transition-transform"
+              />
               Tải CV cá nhân
             </a>
           </motion.div>
         </div>
 
         {/* Right Avatar & Floating Icons */}
-        <div className="lg:col-span-5 flex justify-center items-center relative mt-10 lg:mt-0">
-          <div className="relative w-72 h-72 md:w-80 md:h-80">
-            {/* Pulsing glow under avatar */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-full blur-2xl opacity-40 animate-pulse-slow"></div>
+        <div className="lg:col-span-5 relative flex justify-center items-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] md:w-[400px] md:h-[400px] rounded-full border border-indigo-500/10 flex items-center justify-center"
+          >
+            {/* Concentric rotating circles */}
+            <div className="absolute inset-0 rounded-full border border-indigo-500/5 animate-[spin_40s_linear_infinite]" />
+            <div className="absolute inset-6 rounded-full border border-purple-500/5 animate-[spin_20s_linear_infinite_reverse]" />
 
-            {/* Orbit paths (dashed circles) */}
-            <div className="absolute inset-[-40px] rounded-full border border-dashed border-indigo-500/10 pointer-events-none"></div>
-            <div className="absolute inset-[-90px] rounded-full border border-dashed border-purple-500/10 pointer-events-none"></div>
+            {/* Central Premium Graphic Card */}
+            <div className="absolute w-[80%] h-[80%] rounded-full bg-gradient-to-tr from-indigo-500/20 via-purple-500/20 to-transparent blur-xl pointer-events-none" />
 
-            {/* Avatar Frame */}
+            {/* Interactive Virtual Avatar Card */}
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, type: "spring" }}
-              className="relative w-full h-full rounded-3xl overflow-hidden border-2 border-white/10 shadow-2xl z-10 bg-slate-900 group"
+              whileHover={{ rotateY: 15, rotateX: -15, scale: 1.02 }}
+              style={{ perspective: 1000 }}
+              className="w-[80%] h-[80%] rounded-[2.5rem] glassmorphism border border-white/10 relative overflow-hidden flex flex-col justify-end p-8 group cursor-default shadow-2xl shadow-indigo-500/5"
             >
-              <img
-                src={profife}
-                alt="Nguyen The Viet Hoang profile"
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-indigo-950/80 via-transparent to-transparent z-10" />
+
+              {/* Visual placeholder for personal code graphic */}
+              <div className="absolute top-8 left-8 text-xs font-mono text-indigo-400 opacity-60 leading-normal">
+                <div>const dev = &#123;</div>
+                <div className="pl-4">name: 'Viet Hoang',</div>
+                <div className="pl-4">role: 'Fullstack',</div>
+                <div className="pl-4">code: 'React & NestJS'</div>
+                <div>&#125;;</div>
+              </div>
+
+              <div className="relative z-20">
+                <h3 className="text-white font-bold text-xl mb-1">
+                  Nguyen The Viet Hoang
+                </h3>
+                <p className="text-slate-400 text-xs font-medium tracking-widest uppercase">
+                  Fullstack Developer
+                </p>
+              </div>
             </motion.div>
 
-            {/* Floating Tech Badges */}
-            {techIcons.map((tech) => (
+            {/* Floating Icons */}
+            {techIcons.map((tech, idx) => (
               <motion.div
-                key={tech.name}
-                initial={{ opacity: 0, scale: 0 }}
+                key={idx}
                 animate={{
-                  opacity: 1,
-                  scale: 1,
-                  x: tech.x,
-                  y: tech.y,
+                  y: [0, -12, 0],
+                  x: [0, idx % 2 === 0 ? 6 : -6, 0],
                 }}
                 transition={{
-                  duration: 0.6,
+                  duration: 5,
+                  repeat: Infinity,
                   delay: tech.delay,
-                  type: "spring",
-                  stiffness: 100,
+                  ease: "easeInOut",
                 }}
-                whileHover={{ scale: 1.15, y: tech.y - 10 }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer"
+                className={`absolute ${tech.style} p-3 sm:p-4 rounded-2xl glassmorphism border border-white/10 shadow-lg shadow-black/40 z-30`}
               >
-                {/* Micro animation float */}
-                <motion.div
-                  animate={{
-                    y: [0, -8, 0],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: tech.delay,
-                  }}
-                  className="glass-light hover:border-indigo-500/50 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide text-white shadow-lg border-white/10 hover:shadow-indigo-500/10 flex items-center gap-1.5 select-none"
-                >
-                  <span className={`w-2 h-2 rounded-full bg-gradient-to-r ${tech.color}`}></span>
-                  {tech.name}
-                </motion.div>
+                {tech.icon}
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
