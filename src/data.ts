@@ -7,7 +7,7 @@ export const statsData: Stat[] = [
   { value: 10, suffix: "+", label: "Dự án hoàn thành" },
   { value: 6, suffix: "+", label: "Năm học tập & phát triển" },
   { value: 15, suffix: "+", label: "Công nghệ sử dụng" },
-  { value: 1000, suffix: "+", label: "Giờ lập trình thực tế" }
+  { value: 1000, suffix: "+", label: "Giờ lập trình thực tế" },
 ];
 
 export const experienceData: Experience[] = [
@@ -16,22 +16,22 @@ export const experienceData: Experience[] = [
     role: "Fullstack Web Developer Intern",
     period: "12/2024 - 03/2025",
     desc: "Tham gia phát triển và tối ưu hóa hệ thống quản lý nội bộ. Phối hợp với team thiết kế cơ sở dữ liệu, xây dựng REST API bằng NestJS và tích hợp giao diện người dùng bằng ReactJS. Đóng góp cải thiện hiệu năng tải trang lên đến 20%.",
-    tech: ["React", "NestJS", "TypeScript", "MySQL", "Git"]
+    tech: ["React", "NestJS", "TypeScript", "MySQL", "Git"],
   },
   {
     company: "UTT Dev Club (Câu lạc bộ Học viện)",
     role: "Frontend Developer Leader",
     period: "09/2023 - Present",
     desc: "Dẫn dắt một nhóm gồm 5 thành viên thiết kế và xây dựng các website nội bộ cho trường, tổ chức các buổi training kỹ thuật về React và TailwindCSS cho các bạn sinh viên khóa dưới.",
-    tech: ["React", "TailwindCSS", "TypeScript", "Framer Motion", "Github"]
+    tech: ["React", "TailwindCSS", "TypeScript", "Framer Motion", "Github"],
   },
   {
     company: "Dự án Freelance & Cá nhân",
     role: "Freelance Fullstack Developer",
     period: "2023 - Present",
     desc: "Thiết kế, xây dựng và triển khai các dự án website theo yêu cầu của khách hàng như trang tin tức tổng hợp, trang Landing Page tiếp thị và các hệ thống quản lý dữ liệu nhỏ.",
-    tech: ["NextJS", "NestJS", "SQL Server", "Docker", "Postman"]
-  }
+    tech: ["NextJS", "NestJS", "SQL Server", "Docker", "Postman"],
+  },
 ];
 
 export const skillsData: SkillCategory[] = [
@@ -43,8 +43,8 @@ export const skillsData: SkillCategory[] = [
       { name: "TypeScript", level: 80 },
       { name: "ReactJS", level: 85 },
       { name: "NextJS", level: 75 },
-      { name: "TailwindCSS", level: 90 }
-    ]
+      { name: "TailwindCSS", level: 90 },
+    ],
   },
   {
     category: "Backend",
@@ -53,8 +53,8 @@ export const skillsData: SkillCategory[] = [
       { name: "NestJS", level: 80 },
       { name: "C# / .NET", level: 65 },
       { name: "SignalR (Real-time)", level: 70 },
-      { name: "JWT Auth", level: 85 }
-    ]
+      { name: "JWT Auth", level: 85 },
+    ],
   },
   {
     category: "Database & Cloud",
@@ -62,8 +62,8 @@ export const skillsData: SkillCategory[] = [
       { name: "SQL Server", level: 75 },
       { name: "MySQL", level: 80 },
       { name: "MongoDB", level: 75 },
-      { name: "Redis Caching", level: 60 }
-    ]
+      { name: "Redis Caching", level: 60 },
+    ],
   },
   {
     category: "Tools & DevOps",
@@ -71,9 +71,9 @@ export const skillsData: SkillCategory[] = [
       { name: "Git & GitHub", level: 85 },
       { name: "Docker Containers", level: 70 },
       { name: "Postman API", level: 90 },
-      { name: "Linux / VPS", level: 65 }
-    ]
-  }
+      { name: "Linux / VPS", level: 65 },
+    ],
+  },
 ];
 
 export const projectsData: Project[] = [
@@ -84,7 +84,7 @@ export const projectsData: Project[] = [
     img: pj1,
     github: "https://github.com/vjethoenk/e-learning-fe",
     demo: "https://e-learning-demo.vercel.app",
-    featured: true
+    featured: true,
   },
   {
     title: "Hệ thống đặt xe trực tuyến (CarStore)",
@@ -93,7 +93,7 @@ export const projectsData: Project[] = [
     img: pj2,
     github: "https://github.com/vjethoenk/CarStore",
     demo: "https://carstore-demo.vercel.app",
-    featured: true
+    featured: true,
   },
   {
     title: "Ứng dụng quản lý công việc (ToDoList)",
@@ -102,15 +102,15 @@ export const projectsData: Project[] = [
     img: pj3,
     github: "https://github.com/vjethoenk/ToDoList-NestJs-React",
     demo: "https://todolist-nest-react.vercel.app",
-    featured: true
+    featured: true,
   },
   {
     title: "Hệ thống quản lý thư viện số (LMS)",
     desc: "Giải pháp quản lý thư viện trường học hiện đại, hỗ trợ quét mã vạch mượn trả sách, tự động tính tiền phạt trễ hạn và thống kê biểu đồ động.",
     tech: ["NextJS", "NestJS", "SQL Server", "TailwindCSS", "Recharts"],
-    img: pj1, // Tái sử dụng ảnh preview để giữ tính nhất quán
+    img: pj1,
     github: "https://github.com/vjethoenk/library-management",
     demo: "https://lms-library-demo.vercel.app",
-    featured: false
-  }
+    featured: false,
+  },
 ];

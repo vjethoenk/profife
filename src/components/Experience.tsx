@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Briefcase, Code, GraduationCap, Calendar, Tag } from "lucide-react";
+import { Briefcase, GraduationCap, Calendar, Tag } from "lucide-react";
 
 interface ExperienceItem {
   id: number;
-  type: "work" | "freelance";
+  type: "work" | "freelance" | "project";
   title: string;
   subtitle: string;
   time: string;
@@ -31,26 +31,35 @@ const Experience = () => {
       ],
       icon: <Briefcase className="w-5 h-5 text-indigo-400" />,
     },
+    // {
+    //   id: 2,
+    //   type: "work",
+    //   title: "Fullstack Developer Intern",
+    //   subtitle: "VTI Cloud",
+    //   time: "Tháng 08/2025 - Tháng 12/2025",
+    //   description:
+    //     "Tham gia phát triển dự án nội bộ tích hợp NestJS và ReactJS. Thiết kế cơ sở dữ liệu PostgreSQL, xây dựng API RESTful và GraphQL, triển khai hệ thống phân quyền JWT, thiết kế giao diện Admin Dashboards.",
+    //   technologies: ["NestJS", "PostgreSQL", "Prisma ORM", "React", "TypeORM"],
+    //   icon: <Code className="w-5 h-5 text-emerald-400" />,
+    // },
     {
       id: 2,
-      type: "work",
-      title: "Fullstack Developer Intern",
-      subtitle: "VTI Cloud",
-      time: "Tháng 08/2025 - Tháng 12/2025",
+      type: "project",
+      title: "SmartEdu - E-Learning Platform",
+      subtitle: "Đồ án tốt nghiệp",
+      time: "Tháng 03/2025 - Hiện tại",
       description:
-        "Tham gia phát triển dự án nội bộ tích hợp NestJS và ReactJS. Thiết kế cơ sở dữ liệu PostgreSQL, xây dựng API RESTful và GraphQL, triển khai hệ thống phân quyền JWT, thiết kế giao diện Admin Dashboards.",
-      technologies: ["NestJS", "PostgreSQL", "Prisma ORM", "React", "TypeORM"],
-      icon: <Code className="w-5 h-5 text-emerald-400" />,
-    },
-    {
-      id: 3,
-      type: "freelance",
-      title: "Fullstack Freelancer",
-      subtitle: "Dự án Freelance Cá nhân",
-      time: "Tháng 02/2025 - Hiện tại",
-      description:
-        "Thiết kế và xây dựng các website bán hàng, Landing Pages chất lượng cao cho khách hàng vừa và nhỏ. Phát triển backend bằng NestJS + MongoDB, triển khai ứng dụng lên Docker, quản lý hạ tầng AWS S3 và Cloudflare.",
-      technologies: ["NextJS", "NestJS", "MongoDB", "Docker", "Tailwind CSS"],
+        "Phân tích, thiết kế và xây dựng hệ thống E-Learning hỗ trợ học tập trực tuyến. Phát triển đầy đủ các chức năng quản lý khóa học, bài học, quiz, thanh toán trực tuyến, theo dõi tiến độ học tập và cấp chứng chỉ. Xây dựng RESTful API bằng NestJS, giao diện với Next.js và triển khai lưu trữ tài liệu trên AWS S3.",
+      technologies: [
+        "Next.js",
+        "NestJS",
+        "MongoDB",
+        "TypeScript",
+        "Tailwind CSS",
+        "AWS S3",
+        "JWT",
+        "PayOS",
+      ],
       icon: <GraduationCap className="w-5 h-5 text-pink-400" />,
     },
   ];
@@ -71,7 +80,7 @@ const Experience = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 mb-4">
+          <h2 className="text-4xl font-extrabold text-transparent text-white bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 mb-4">
             Kinh Nghiệm Làm Việc
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto text-lg">

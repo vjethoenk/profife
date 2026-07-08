@@ -127,16 +127,13 @@ const About = () => {
                 Tôi là một lập trình viên đam mê phát triển Web
               </h3>
               <p className="text-gray-300 leading-relaxed text-sm md:text-base">
-                Hiện tại, tôi là sinh viên năm 4 chuyên ngành Kỹ thuật Phần mềm
-                tại Trường Đại học Công nghệ Giao thông Vận tải. Tôi đam mê phát
-                triển các ứng dụng web và luôn chủ động học hỏi những công nghệ
-                mới để hoàn thiện kỹ năng của mình.
+                Hiện tại, tôi là sinh viên năm 4 chuyên ngành Công nghệ Thông
+                tin tại Trường Đại học Công nghệ Giao thông Vận tải.
               </p>
               <p className="text-gray-300 leading-relaxed text-sm md:text-base">
-                Tôi mong muốn được làm việc trong môi trường chuyên nghiệp, nơi
-                có thể áp dụng kiến thức đã học, tích lũy kinh nghiệm thực tế và
-                từng bước phát triển thành một Fullstack Developer có nền tảng
-                vững chắc.
+                Tôi luôn chủ động học hỏi và mong muốn được làm việc trong môi
+                trường chuyên nghiệp để tích lũy kinh nghiệm thực tế, nâng cao
+                kỹ năng và phát triển theo định hướng Fullstack Developer.
               </p>
             </motion.div>
 

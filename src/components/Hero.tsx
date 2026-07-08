@@ -120,10 +120,10 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-gray-400 text-sm md:text-base max-w-xl leading-relaxed"
           >
-            Tôi là một Fullstack Developer mới tốt nghiệp với niềm đam mê phát
-            triển web. Tôi mong muốn được tham gia xây dựng những sản phẩm chất
-            lượng, đồng thời tích lũy kinh nghiệm và nâng cao kỹ năng trong môi
-            trường chuyên nghiệp.
+            Tôi là sinh viên năm cuối chuyên ngành Công nghệ Thông tin, định
+            hướng trở thành Fullstack Developer. Tôi yêu thích phát triển ứng
+            dụng web và mong muốn được học hỏi, tích lũy kinh nghiệm thực tế để
+            đóng góp vào việc xây dựng những sản phẩm chất lượng.
           </motion.p>
 
           {/* CTA Buttons */}

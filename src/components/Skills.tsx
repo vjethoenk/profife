@@ -12,9 +12,11 @@ import {
   SiPostgresql,
   SiMongodb,
   SiPrisma,
+  SiShadcnui,
   SiGit,
   SiGithub,
   SiDocker,
+  SiMysql,
 } from "react-icons/si";
 import { Zap, Layout, Server, Database, Wrench, Cloud } from "lucide-react";
 
@@ -41,9 +43,9 @@ const Skills = () => {
         "Xây dựng giao diện Responsive, hiệu năng cao và UX mượt mà.",
       gradient: "from-indigo-500/20 to-cyan-500/20 border-indigo-500/30",
       items: [
-        { name: "HTML5", icon: <SiHtml5 />, color: "text-[#E34F26]" },
-        { name: "CSS3", icon: <SiCss />, color: "text-[#1572B6]" },
-        { name: "JavaScript", icon: <SiJavascript />, color: "text-[#F7DF1E]" },
+        // { name: "HTML5", icon: <SiHtml5 />, color: "text-[#E34F26]" },
+        // { name: "CSS3", icon: <SiCss />, color: "text-[#1572B6]" },
+        // { name: "JavaScript", icon: <SiJavascript />, color: "text-[#F7DF1E]" },
         { name: "TypeScript", icon: <SiTypescript />, color: "text-[#3178C6]" },
         { name: "ReactJS", icon: <SiReact />, color: "text-[#61DAFB]" },
         { name: "NextJS", icon: <SiNextdotjs />, color: "text-white" },
@@ -52,27 +54,32 @@ const Skills = () => {
           icon: <SiTailwindcss />,
           color: "text-[#06B6D4]",
         },
+        {
+          name: "Shadcn UI",
+          icon: <SiShadcnui />,
+          color: "text-white",
+        },
       ],
     },
     {
       title: "Backend Development",
       icon: <Server className="w-5 h-5 text-purple-400" />,
       description:
-        "Xây dựng API RESTful, GraphQL và hệ thống backend hiệu năng cao, bảo mật.",
+        "Xây dựng API RESTful và hệ thống backend hiệu năng cao, bảo mật.",
       gradient: "from-purple-500/20 to-pink-500/20 border-purple-500/30",
       items: [
         { name: "NestJS", icon: <SiNestjs />, color: "text-[#E0234E]" },
-        { name: "Prisma ORM", icon: <SiPrisma />, color: "text-slate-300" },
+        // { name: "Prisma ORM", icon: <SiPrisma />, color: "text-slate-300" },
         {
           name: "JWT auth",
           icon: <SiJsonwebtokens />,
           color: "text-[#d63aff]",
         },
-        {
-          name: "GraphQL",
-          icon: <Zap className="w-4 h-4" />,
-          color: "text-[#E10098]",
-        },
+        // {
+        //   name: "GraphQL",
+        //   icon: <Zap className="w-4 h-4" />,
+        //   color: "text-[#E10098]",
+        // },
       ],
     },
     {
@@ -82,8 +89,9 @@ const Skills = () => {
         "Thiết kế schema dữ liệu quan hệ và phi quan hệ, tối ưu hóa truy vấn.",
       gradient: "from-emerald-500/20 to-teal-500/20 border-emerald-500/30",
       items: [
-        { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-[#4169E1]" },
         { name: "MongoDB", icon: <SiMongodb />, color: "text-[#47A248]" },
+        { name: "MySQL", icon: <SiMysql />, color: "text-[#4479A1]" },
+        { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-[#4169E1]" },
       ],
     },
     {
@@ -134,7 +142,7 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 mb-4">
+          <h2 className="text-4xl text-white font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 mb-4">
             Công Nghệ Sử Dụng
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto text-lg">
@@ -169,9 +177,9 @@ const Skills = () => {
                 </h3>
               </div>
 
-              <p className="text-sm text-slate-400 mb-8 leading-relaxed">
+              {/* <p className="text-sm text-slate-400 mb-8 leading-relaxed">
                 {group.description}
-              </p>
+              </p> */}
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {group.items.map((tech) => (
