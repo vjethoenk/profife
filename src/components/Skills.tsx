@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
 import {
-  SiHtml5,
-  SiCss,
-  SiJavascript,
   SiTypescript,
   SiReact,
   SiNextdotjs,
@@ -11,14 +8,13 @@ import {
   SiJsonwebtokens,
   SiPostgresql,
   SiMongodb,
-  SiPrisma,
   SiShadcnui,
   SiGit,
   SiGithub,
   SiDocker,
   SiMysql,
 } from "react-icons/si";
-import { Zap, Layout, Server, Database, Wrench, Cloud } from "lucide-react";
+import { Layout, Server, Database, Wrench, Cloud } from "lucide-react";
 
 interface TechItem {
   name: string;
