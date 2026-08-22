@@ -6,25 +6,25 @@ const About = () => {
   const strengths = [
     {
       title: "Quick Learner",
-      desc: "Tiếp thu công nghệ mới nhanh và luôn sẵn sàng học hỏi từ phản hồi.",
+      desc: "Tiếp thu nhanh công nghệ mới và liên tục cập nhật xu hướng.",
       icon: Compass,
       color: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20",
     },
     {
       title: "Responsibility",
-      desc: "Có trách nhiệm với công việc được giao và cố gắng hoàn thành đúng tiến độ.",
+      desc: "Trách nhiệm cao, đảm bảo tiến độ và chất lượng công việc.",
       icon: Lightbulb,
       color: "text-indigo-400 bg-indigo-500/10 border-indigo-500/20",
     },
     {
       title: "Teamwork",
-      desc: "Có tinh thần hợp tác, sẵn sàng lắng nghe và hỗ trợ đồng đội trong các dự án.",
+      desc: "Lắng nghe, chủ động giao tiếp và hỗ trợ đồng đội hiệu quả.",
       icon: Users,
       color: "text-purple-400 bg-purple-500/10 border-purple-500/20",
     },
     {
       title: "Growth Mindset",
-      desc: "Chủ động cải thiện kỹ năng và mong muốn phát triển lâu dài .",
+      desc: "Sẵn sàng đón nhận thử thách và cải thiện từ phản hồi.",
       icon: Award,
       color: "text-pink-400 bg-pink-500/10 border-pink-500/20",
     },
@@ -67,8 +67,7 @@ const About = () => {
             transition={{ delay: 0.2 }}
             className="text-gray-400 text-sm md:text-base leading-relaxed"
           >
-            Tìm hiểu thêm về định hướng công việc, thế mạnh cốt lõi và con đường
-            lập trình của tôi.
+
           </motion.p>
         </div>
 
@@ -124,17 +123,12 @@ const About = () => {
               className="space-y-4"
             >
               <h3 className="text-2xl font-bold text-white tracking-tight">
-                Tôi là một lập trình viên đam mê phát triển Web
+                Fullstack Developer (React& Java Spring Boot)
               </h3>
               <p className="text-gray-300 leading-relaxed text-sm md:text-base">
-                Hiện tại, tôi là sinh viên năm 4 chuyên ngành Công nghệ Thông
-                tin tại Trường Đại học Công nghệ Giao thông Vận tải.
+                Tốt nghiệp chuyên ngành Công nghệ Thông tin tại Trường Đại học Công nghệ Giao thông Vận tải, định hướng phát triển trở thành Full-stack Developer. Có kiến thức nền tảng và kinh nghiệm thực hành với ReactJS, TypeScript, Java Spring Boot và MySQL
               </p>
-              <p className="text-gray-300 leading-relaxed text-sm md:text-base">
-                Tôi luôn chủ động học hỏi và mong muốn được làm việc trong môi
-                trường chuyên nghiệp để tích lũy kinh nghiệm thực tế, nâng cao
-                kỹ năng và phát triển theo định hướng Fullstack Developer.
-              </p>
+
             </motion.div>
 
             {/* Strengths Cards */}

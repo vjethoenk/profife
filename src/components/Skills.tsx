@@ -5,6 +5,7 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiNestjs,
+  SiSpringboot,
   SiJsonwebtokens,
   SiPostgresql,
   SiMongodb,
@@ -13,7 +14,9 @@ import {
   SiGithub,
   SiDocker,
   SiMysql,
+  SiRedis,
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 import { Layout, Server, Database, Wrench, Cloud } from "lucide-react";
 
 interface TechItem {
@@ -39,9 +42,6 @@ const Skills = () => {
         "Xây dựng giao diện Responsive, hiệu năng cao và UX mượt mà.",
       gradient: "from-indigo-500/20 to-cyan-500/20 border-indigo-500/30",
       items: [
-        // { name: "HTML5", icon: <SiHtml5 />, color: "text-[#E34F26]" },
-        // { name: "CSS3", icon: <SiCss />, color: "text-[#1572B6]" },
-        // { name: "JavaScript", icon: <SiJavascript />, color: "text-[#F7DF1E]" },
         { name: "TypeScript", icon: <SiTypescript />, color: "text-[#3178C6]" },
         { name: "ReactJS", icon: <SiReact />, color: "text-[#61DAFB]" },
         { name: "NextJS", icon: <SiNextdotjs />, color: "text-white" },
@@ -64,18 +64,14 @@ const Skills = () => {
         "Xây dựng API RESTful và hệ thống backend hiệu năng cao, bảo mật.",
       gradient: "from-purple-500/20 to-pink-500/20 border-purple-500/30",
       items: [
+        { name: "Java", icon: <FaJava />, color: "text-[#E76F00]" },
+        { name: "Spring Boot", icon: <SiSpringboot />, color: "text-[#6DB33F]" },
         { name: "NestJS", icon: <SiNestjs />, color: "text-[#E0234E]" },
-        // { name: "Prisma ORM", icon: <SiPrisma />, color: "text-slate-300" },
         {
           name: "JWT auth",
           icon: <SiJsonwebtokens />,
           color: "text-[#d63aff]",
         },
-        // {
-        //   name: "GraphQL",
-        //   icon: <Zap className="w-4 h-4" />,
-        //   color: "text-[#E10098]",
-        // },
       ],
     },
     {
@@ -88,6 +84,7 @@ const Skills = () => {
         { name: "MongoDB", icon: <SiMongodb />, color: "text-[#47A248]" },
         { name: "MySQL", icon: <SiMysql />, color: "text-[#4479A1]" },
         { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-[#4169E1]" },
+        { name: "Redis", icon: <SiRedis />, color: "text-[#DC382D]" },
       ],
     },
     {
@@ -142,7 +139,7 @@ const Skills = () => {
             Công Nghệ Sử Dụng
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto text-lg">
-            Hệ sinh thái công nghệ tôi đã làm việc và áp dụng vào phát triển các
+            Công nghệ tôi đã làm việc và áp dụng vào phát triển các
             dự án thực tế.
           </p>
         </motion.div>

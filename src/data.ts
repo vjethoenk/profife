@@ -49,6 +49,8 @@ export const skillsData: SkillCategory[] = [
   {
     category: "Backend",
     skills: [
+      { name: "Java", level: 80 },
+      { name: "Java Spring Boot", level: 80 },
       { name: "NodeJS", level: 80 },
       { name: "NestJS", level: 80 },
       { name: "C# / .NET", level: 65 },
@@ -78,6 +80,25 @@ export const skillsData: SkillCategory[] = [
 
 export const projectsData: Project[] = [
   {
+    title: "Vina Banking",
+    desc: "Ứng dụng ngân hàng trực tuyến mô phỏng quản lý tài khoản, nạp tiền, chuyển tiền và lịch sử giao dịch, tích hợp JWT, RBAC và Email OTP để bảo mật.",
+    tech: [
+      "ReactJS",
+      "TypeScript",
+      "Shadcn UI",
+      "TanStack Query",
+      "Zustand",
+      "Spring Boot",
+      "MySQL",
+      "Redis",
+      "Docker",
+    ],
+    img: pj3,
+    github: "https://github.com/vjethoenk/banking-web",
+    demo: "#",
+    featured: true,
+  },
+  {
     title: "Hệ thống học trực tuyến (E-Learning)",
     desc: "Nền tảng học trực tuyến toàn diện, hỗ trợ quản lý khóa học, bài học video, làm bài kiểm tra trắc nghiệm và hệ thống diễn đàn thảo luận real-time.",
     tech: ["React", "NestJS", "MongoDB", "TailwindCSS", "WebSockets"],
@@ -93,15 +114,6 @@ export const projectsData: Project[] = [
     img: pj2,
     github: "https://github.com/vjethoenk/CarStore",
     demo: "https://carstore-demo.vercel.app",
-    featured: true,
-  },
-  {
-    title: "Ứng dụng quản lý công việc (ToDoList)",
-    desc: "Công cụ quản lý công việc cá nhân và nhóm, tích hợp kéo thả tiện lợi, thiết lập deadline, nhắc nhở qua email và theo dõi tiến độ trực quan.",
-    tech: ["React", "NestJS", "MongoDB", "TailwindCSS", "JWT Auth"],
-    img: pj3,
-    github: "https://github.com/vjethoenk/ToDoList-NestJs-React",
-    demo: "https://todolist-nest-react.vercel.app",
     featured: true,
   },
   {

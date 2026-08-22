@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, GraduationCap, Calendar, Tag } from "lucide-react";
+import { Briefcase, GraduationCap, Calendar, Tag, Landmark } from "lucide-react";
 
 interface ExperienceItem {
   id: number;
@@ -14,6 +14,7 @@ interface ExperienceItem {
 
 const Experience = () => {
   const experiences: ExperienceItem[] = [
+
     {
       id: 1,
       type: "work",
@@ -27,27 +28,40 @@ const Experience = () => {
         "Next.js",
         "TypeScript",
         "Tailwind CSS",
-        "Redux Toolkit",
+        "TanStack Query",
+        "Zustand",
       ],
       icon: <Briefcase className="w-5 h-5 text-indigo-400" />,
     },
-    // {
-    //   id: 2,
-    //   type: "work",
-    //   title: "Fullstack Developer Intern",
-    //   subtitle: "VTI Cloud",
-    //   time: "Tháng 08/2025 - Tháng 12/2025",
-    //   description:
-    //     "Tham gia phát triển dự án nội bộ tích hợp NestJS và ReactJS. Thiết kế cơ sở dữ liệu PostgreSQL, xây dựng API RESTful và GraphQL, triển khai hệ thống phân quyền JWT, thiết kế giao diện Admin Dashboards.",
-    //   technologies: ["NestJS", "PostgreSQL", "Prisma ORM", "React", "TypeORM"],
-    //   icon: <Code className="w-5 h-5 text-emerald-400" />,
-    // },
+    {
+      id: 3,
+      type: "project",
+      title: "Vina Banking",
+      subtitle: "Dự án cá nhân",
+      time: "Tháng 07/2026 - Hiện tại",
+      description:
+        "Xây dựng ứng dụng ngân hàng trực tuyến cho phép người dùng quản lý tài khoản, nạp tiền, chuyển tiền và theo dõi lịch sử giao dịch. Hệ thống hỗ trợ xác thực và phân quyền người dùng, đồng thời áp dụng OTP qua email để xác thực giao dịch chuyển tiền.",
+      technologies: [
+        "ReactJS",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "TanStack Query",
+        "Zustand",
+        "Java",
+        "Spring Boot",
+        "MySQL",
+        "Redis",
+        "Docker",
+      ],
+      icon: <Landmark className="w-5 h-5 text-emerald-400" />,
+    },
     {
       id: 2,
       type: "project",
       title: "SmartEdu - E-Learning Platform",
       subtitle: "Đồ án tốt nghiệp",
-      time: "Tháng 03/2025 - Hiện tại",
+      time: "Tháng 03/2026 - Tháng 07/2026",
       description:
         "Phân tích, thiết kế và xây dựng hệ thống E-Learning hỗ trợ học tập trực tuyến. Phát triển đầy đủ các chức năng quản lý khóa học, bài học, quiz, thanh toán trực tuyến, theo dõi tiến độ học tập và cấp chứng chỉ. Xây dựng RESTful API bằng NestJS, giao diện với Next.js và triển khai lưu trữ tài liệu trên AWS S3.",
       technologies: [
@@ -84,8 +98,7 @@ const Experience = () => {
             Kinh Nghiệm Làm Việc
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto text-lg">
-            Hành trình học tập và làm việc chuyên nghiệp của tôi qua các công ty
-            và dự án.
+            Phát triển chuyên môn qua các doanh nghiệp và dự án thực tế.
           </p>
         </motion.div>
 

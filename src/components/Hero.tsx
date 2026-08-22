@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Database, Download } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
 import {
   SiReact,
-  SiNextdotjs,
   SiTypescript,
   SiNestjs,
+  SiSpringboot,
   SiDocker,
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 
 const Hero = () => {
   // Floating technology items to orbit/animate around the avatar
@@ -17,7 +18,7 @@ const Hero = () => {
       delay: 0,
     },
     {
-      icon: <SiNextdotjs className="text-white w-6 h-6" />,
+      icon: <SiSpringboot className="text-[#6DB33F] w-6 h-6" />,
       style: "bottom-12 left-4",
       delay: 0.5,
     },
@@ -32,7 +33,7 @@ const Hero = () => {
       delay: 1.5,
     },
     {
-      icon: <Database className="text-[#CC2927] w-6 h-6" />,
+      icon: <FaJava className="text-[#E76F00] w-6 h-6" />,
       style: "top-[45%] left-4",
       delay: 2,
     },
@@ -111,20 +112,18 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-xl"
           >
-            "Building Modern Web Applications with React & NestJs"
+            "Building Web Applications with React & Spring Boot"
           </motion.h1>
 
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-gray-400 text-sm md:text-base max-w-xl leading-relaxed"
           >
-            Tôi là sinh viên năm cuối chuyên ngành Công nghệ Thông tin, định
-            hướng trở thành Fullstack Developer. Tôi yêu thích phát triển ứng
-            dụng web và mong muốn được học hỏi, tích lũy kinh nghiệm thực tế để
-            đóng góp vào việc xây dựng những sản phẩm chất lượng.
-          </motion.p>
+            Lập trình viên Fullstack với định hướng phát triển các hệ thống Web hiện
+            đại, tối ưu hiệu năng và trải nghiệm người dùng.
+          </motion.p> */}
 
           {/* CTA Buttons */}
           <motion.div
@@ -182,7 +181,7 @@ const Hero = () => {
                 <div>const dev = &#123;</div>
                 <div className="pl-4">name: 'Viet Hoang',</div>
                 <div className="pl-4">role: 'Fullstack',</div>
-                <div className="pl-4">code: 'React & NestJS'</div>
+                <div className="pl-4">tech: 'React & Spring Boot'</div>
                 <div>&#125;;</div>
               </div>
 

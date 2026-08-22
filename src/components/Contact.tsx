@@ -52,7 +52,7 @@ const Contact = () => {
             transition={{ delay: 0.2 }}
             className="text-gray-400 text-sm md:text-base leading-relaxed"
           >
-            Hãy gửi tin nhắn hoặc kết nối trực tiếp qua các mạng xã hội. Tôi sẽ phản hồi sớm nhất có thể.
+            Hãy liên hệ trực tiếp hoặc qua biểu mẫu bên dưới. Tôi sẽ phản hồi sớm nhất.
           </motion.p>
         </div>
 
@@ -70,7 +70,7 @@ const Contact = () => {
                 Thông Tin Liên Hệ
               </h3>
               <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-                Bạn có ý tưởng dự án thú vị, cơ hội tuyển dụng phù hợp hay chỉ đơn giản muốn trao đổi học thuật? Đừng ngần ngại liên lạc!
+                Sẵn sàng kết nối và trao đổi về các cơ hội hợp tác, dự án mới hoặc chia sẻ công nghệ.
               </p>
             </div>
 
