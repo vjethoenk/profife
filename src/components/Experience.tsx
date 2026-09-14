@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, GraduationCap, Calendar, Tag, Landmark } from "lucide-react";
+import { Briefcase, GraduationCap, Calendar, Tag, Smartphone } from "lucide-react";
 
 interface ExperienceItem {
   id: number;
@@ -36,11 +36,11 @@ const Experience = () => {
     {
       id: 3,
       type: "project",
-      title: "Vina Banking",
+      title: "iPhoneStore -  iPhone E-commerce Platform",
       subtitle: "Dự án cá nhân",
-      time: "Tháng 07/2026 - Hiện tại",
+      time: "Tháng 08/2026 - Hiện tại",
       description:
-        "Xây dựng ứng dụng ngân hàng trực tuyến cho phép người dùng quản lý tài khoản, nạp tiền, chuyển tiền và theo dõi lịch sử giao dịch. Hệ thống hỗ trợ xác thực và phân quyền người dùng, đồng thời áp dụng OTP qua email để xác thực giao dịch chuyển tiền.",
+        "Xây dựng hệ thống thương mại điện tử chuyên bán các sản phẩm iPhone, hỗ trợ quản lý sản phẩm, danh mục, biến thể, người dùng và đơn hàng. Hệ thống áp dụng JWT Authentication & Authorization, phân quyền Role/Permission, đồng thời thiết kế RESTful API theo hướng modular, dễ mở rộng và bảo trì.",
       technologies: [
         "ReactJS",
         "TypeScript",
@@ -51,10 +51,9 @@ const Experience = () => {
         "Java",
         "Spring Boot",
         "MySQL",
-        "Redis",
         "Docker",
       ],
-      icon: <Landmark className="w-5 h-5 text-emerald-400" />,
+      icon: <Smartphone className="w-5 h-5 text-emerald-400" />,
     },
     {
       id: 2,
